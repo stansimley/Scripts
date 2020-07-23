@@ -34,10 +34,11 @@ print("Found {} csv files in folder".format(len(all_files)))
 print("Note: Name of table in database corresponds to name of .csv file. Please use unique names for different tables.")
 for file_path in all_files:
     file_name = os.path.basename(file_path).replace('.csv','') #name of csv file
-    raw_data = open(file_path, "rb").read()
-    file_encoding = chardet.detect(raw_data) #get encoding and confidence level of guesstimate
-    print("Creating table for {}, file encoding:{}".format(file_name, file_encoding))
-    df = pd.read_csv(file_path, sep =';', skiprows=1, encoding=file_encoding.get('encoding'))
+    #to get encoding of file and confidence level- delete next 3 lines if not applicable
+    #raw_data = open(file_path, "rb").read() 
+    #file_encoding = chardet.detect(raw_data) 
+    #print("Creating table for {}, file encoding:{}".format(file_name, file_encoding))
+    df = pd.read_csv(file_path) # optional arguments depending on .csv file specifications: sep =';', skiprows=1, encoding=file_encoding.get('encoding')
     df.columns = [''.join(char for char in column.title() if char.isalnum()) for column in df.columns] #change column names to SQL convention
     try:
         df.to_sql(name=file_name, con=engine, index=False) #if_exists = 'replace' or 'append'
