@@ -1,5 +1,5 @@
 # CSV to Google Cloud MySQL Database
-*python script to push all CSV type data from a folder to a Google Cloud Platform (GCP) MySQL database*
+*python script to push all CSV files from folder to a Google Cloud Platform (GCP) MySQL database*
 
 ## Abstract
 Converting various types of CSV files to SQL may require different specifications depending on encoding, delimiting, datatypes, etc.
