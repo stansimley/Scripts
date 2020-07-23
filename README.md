@@ -1,4 +1,4 @@
-# csv-to-google-cloud-database
+# CSV to Google Cloud MySQL Database
 *python script to push all CSV type data from a folder to a Google Cloud Platform (GCP) MySQL database*
 
 ## Abstract
