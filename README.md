@@ -9,3 +9,7 @@ Useful links:
 https://cloud.google.com/sql/docs/mysql/create-manage-databases  
 https://cloud.google.com/sql/docs/mysql/create-instance  
 https://cloud.google.com/sql/docs/mysql/connect-external-app  
+
+## Abstract
+Converting various types of CSV files to SQL may require different specifications depending on encoding, delimiting, datatypes, etc
+This script aims to tackle the problem in the most general way possible to provide ease of uploading data when demands for optimization are not too heavy.
