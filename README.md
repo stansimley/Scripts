@@ -3,7 +3,7 @@
 
 ## Prerequisites:
 * Set up GCP account: Create project, instance and database
-* Download google_cloud_proxy to connect Cloud SQl to external applications (python in this case)
+* Download google_cloud_proxy to connect Cloud SQL to external applications (python in this case)
 
 Useful links:  
 https://cloud.google.com/sql/docs/mysql/create-manage-databases  
