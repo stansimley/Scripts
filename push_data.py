@@ -14,9 +14,10 @@ host = '127.0.0.1'
 port = '3306'
 database =
 folder_path =
+cloud_sql_proxy_path = ../cloud_sql_proxy
 
 #run cmd command for google cloud sql proxy to use python
-subprocess.Popen('cloud_sql_proxy -instances={}=tcp:{}'.format(instance, port))
+subprocess.Popen(cloud_sql_proxy_path + ' -instances={}=tcp:{}'.format(instance, port))
 
 #connect to database
 con = mdb.connect(host, user, password, database, local_infile=True)
